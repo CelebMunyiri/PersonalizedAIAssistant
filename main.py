@@ -11,3 +11,9 @@ def extract_text_from_pdf(pdf_file_path):
         return pdf_text
     except Exception as e:
         return f"Error extracting text"    
+    
+    pdf_path="node.pdf"
+    extracted_text=extract_text_from_pdf(pdf_path)
+    
+    file = open("pdf-text.txt",encoding="utf-8")
+    file.write(extracted_text)
